@@ -1,0 +1,148 @@
+/* a font-family vai definir  a fonte usada nos elementos, colocamos várias fontes para caso o navegador usado não suporte a primeira, tente aplicar a segunda fonte e assim sucessivamente*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*a propriedade display vai criar um bloco com elementos*/
+/* a flex-wrap torna os elementos flexíveis quebrando em multíplas linhas*/ 
+/*o max-width vai definir a largura máxima*/
+/* Aqui usamos dois valores para o margin "0" e "auto", pois esses elementos seguem sentido horário.
+Quando colocamos dois valores, mas não colocamos outros, os que não foram colocados seguem o modelo do seu lado oposto.
+Então, quando colocamos "0" e "auto" queremos dizer que top/bottom = 0 e left/right = auto.
+O auto quer dizer que o navegador escolherá um valor para, nesse caso, o left/right*/
+
+.center{
+    display:flex;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 2%;
+}
+
+/* overflow vai dizer como, e quando, um tipo de bloco de texto vai ser cortado, 
+o valor hidden diz que o conteúdo que excede os eixos x e y vão ser cortados*/
+html, body{
+    height:100%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+/* Aqui usamos dois valores para o padding "20px" e "0", pois esses elementos seguem sentido horário.
+Quando colocamos dois valores, mas não colocamos outros, os que não foram colocados seguem o modelo do seu lado oposto.
+Então, quando colocamos "20px" e "0" queremos dizer que top/bottom = 20px e left/right = 0*/
+header{
+    height: 200px;
+    padding:20px 0;
+    background-color: bisque;
+}
+
+.logo{
+width: 50%;
+}
+
+.logo img{
+    padding-bottom: 10px;
+width: 250px;
+height: 160px;
+}
+
+/*o text-align vai cuidar da orientação do texto, nesse caso, o alinhamento fica a direita*/
+.menu{
+    padding-top:30px;
+     width:50%;
+    text-align:right;
+}
+/*text decoration define a decoração do site, o valor none diz que o texto não vai ter decoração*/
+/*font-weight define o quanto o texto vai ser grosso ou fino*/
+/* margin right: vai definir a margem da direita de algum elemento, podendo receber valor negativo */
+.menu a{
+color:black;
+text-decoration:none;
+font-weight:bold;
+margin-right:15px;
+}
+/*a função calc vai ser responsável por fazer um calculo, o resultado desse calculo vai ser o valor para a propriedade*/
+section.sobre {
+    height: calc(100%-200px);
+    position: relative;
+}
+
+/*border-radius: essa propriedade vai definir o raio das bordas dos elementos, podendo arredonda-los.*/
+.extras{
+    position:absolute;
+    border-radius: 50%;
+    top: 0px;
+    right:-510px;
+    width: 950px;
+    height: 925px;
+    background-color:rgb(138, 43, 226)
+}
+.extras img{
+    position:absolute;
+    top: 95px;
+    left: 70px;
+width: 350px;
+height: 375px;
+}
+
+.social-media {
+    position:absolute;
+    right: -510px;
+    top: -200px;
+}
+
+.social-media img{
+    
+    width: -900px;
+    margin: -900px;
+}
+.texto{
+    margin: top 50px;
+}
+/* margin-top: vai definir o tamanho somente da margem em cima, as outras margens seguiram o que o navegador escolhe por padrão*/
+.texto h1{
+   margin-top: 0;
+    font-size: 50px;
+}
+.texto p{
+    margin: 20px 0;
+    color: black;
+    font-size: 14px;
+font-weight: bold;
+max-width: 800px;
+}
+/*border-radius: essa propriedade vai definir o raio das bordas dos elementos, podendo arredonda-los.*/
+/*cursor: pode gerar diversos cursores quando o usuário passa o mouse em cima*/
+.texto button{
+    border: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/*O display block vai fazer com que a caixa de renderização de cada elemento ocupe toda uma linha, portanto
+mesmo se for colocada uma simples letra, a próxima letra será posicionada abaixo. Ou seja, 
+essa propriedade faz com que cada elemento se posicione em uma linha diferente.*/
+.adicionais {
+    display: block;
+    position: relative;
+    right: -350px;
+    top: -40px
+}
+
+.adicionais img{
+    width: 150px;
+    height: 150px;
+}
+#trufa{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    top: 45px;
+}
